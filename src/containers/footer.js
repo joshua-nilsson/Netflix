@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer } from '../components';
+import { Footer, Modal } from '../components';
 
 export function FooterContainer() {
   return (
@@ -38,6 +38,41 @@ export function FooterContainer() {
       </Footer.Row>
       <Footer.Break />
       <Footer.Text>Netflix United Kingdom</Footer.Text>
+      <Footer.Break />
+
+      <Modal>
+        <Modal.Button>
+          <Modal.ButtonIcon className="w-8 h-8" />
+        </Modal.Button>
+        <Modal.Dialog>
+          <Modal.DialogTitle>
+            <Modal.DialogIcon />
+            NOT THE ACTUAL WEBSITE
+          </Modal.DialogTitle>
+          <Modal.DialogFrame>
+            <Modal.DialogDisclaimer>
+              This website is{' '}
+              <strong>
+                <u>NOT</u>
+              </strong>{' '}
+              Netflix.
+              <br />
+              Please do not enter any sensitive information.
+            </Modal.DialogDisclaimer>
+            <Modal.DialogClarification>
+              You are viewing a project built for the purpose of mastery in my
+              skillset as a Front-End Software Engineer.
+            </Modal.DialogClarification>
+          </Modal.DialogFrame>
+          <Modal.DialogFrame>
+            <Modal.DialogButton>Got it, thanks!</Modal.DialogButton>
+            <Modal.ToggleFrame>
+              <Modal.Toggle />
+              <Modal.ToggleMessage>Do not show again</Modal.ToggleMessage>
+            </Modal.ToggleFrame>
+          </Modal.DialogFrame>
+        </Modal.Dialog>
+      </Modal>
     </Footer>
   );
 }
